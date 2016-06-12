@@ -15,15 +15,21 @@ Setup
 -----
 
 Run the Mock Auth backend in localhost.
-```
+```bash
 ruby MockRestServlet.rb
 ```
+
+Use cocoapods to install the dependencies. 
+```bash
+pod install 
+```
+Open the workspace in xCode. 
+
 
 Unit Tests
 ----------
 
-MVVM separation of logic from presentation provides high testability with a minimal setup.
-For instance you don't need the ruby Mock backend for testing purposes since an offline Mock AuthService is injected on test cases.
+One of the main advantages of the MVVM Architecture is the high testability with a minimal setup. It's based on the separation of the app logic (ViewModel layer) from presentation (View layer).
 
 Unit tests are written using the BDD frameworks [Quick][quick] and [Nimble][nimble]. 
 
