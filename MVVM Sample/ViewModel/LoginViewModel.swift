@@ -65,7 +65,7 @@ class LoginViewModel: NSObject {
         self.loginAction.events.observeNext { [weak self] (event) in
             switch event {
             case let .Failed(error):
-                self?.errorMessage.value = "Localized NETWORK error for code: \(error.code)";
+                self?.errorMessage.value = "Localized NETWORK error for code: \(error.code). Run the MockRestServlet.rb in your terminal.";
                 print("fail")
             default: break
             }
