@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kAb-q7-pLb">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Login-->
+        <scene sceneID="ZbZ-Bg-Kco">
+            <objects>
+                <viewController id="FJT-aX-E5T" customClass="LoginViewController" customModule="MVVM_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FJh-ik-yoJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="b20-7U-zNS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OMG-V6-qES">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WjH-wI-6ja">
+                                <rect key="frame" x="150" y="143" width="300" height="120"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MhQ-Mh-xK3">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Suk-qG-QJb">
+                                        <rect key="frame" x="0.0" y="40" width="300" height="30"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EbQ-Xd-YwG">
+                                        <rect key="frame" x="0.0" y="80" width="300" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKT-bM-O7e">
+                                        <rect key="frame" x="0.0" y="90" width="300" height="30"/>
+                                        <state key="normal" title="Login"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="GCq-xw-6mW"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="WjH-wI-6ja" firstAttribute="centerX" secondItem="OMG-V6-qES" secondAttribute="centerX" id="5oZ-b2-DLq"/>
+                            <constraint firstItem="WjH-wI-6ja" firstAttribute="top" secondItem="FJh-ik-yoJ" secondAttribute="bottom" constant="79" id="fYq-a6-VtN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Login" id="Ja2-Kc-ABu"/>
+                    <connections>
+                        <outlet property="errorMessageLabel" destination="EbQ-Xd-YwG" id="XVs-3F-wJC"/>
+                        <outlet property="loginButton" destination="rKT-bM-O7e" id="9Iv-tM-otT"/>
+                        <outlet property="passwordTextField" destination="Suk-qG-QJb" id="Z7J-JM-0G6"/>
+                        <outlet property="usernameTextField" destination="MhQ-Mh-xK3" id="hJo-mu-XXE"/>
+                        <segue destination="Ddf-xA-lu0" kind="show" identifier="showWelcome" id="Jto-9a-oDY">
+                            <nil key="action"/>
+                        </segue>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ett-61-cyN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="228" y="-1411"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="UGi-8p-S6W">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeViewController" id="Ddf-xA-lu0" customClass="HomeVC" customModule="MVVM_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WTE-Dn-P22"/>
+                        <viewControllerLayoutGuide type="bottom" id="aFZ-SY-at3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uav-lr-cjP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZB-h2-uz4">
+                                <rect key="frame" x="265" y="289" width="71" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CZB-h2-uz4" firstAttribute="centerY" secondItem="uav-lr-cjP" secondAttribute="centerY" id="epk-9B-5TO"/>
+                            <constraint firstItem="CZB-h2-uz4" firstAttribute="centerX" secondItem="uav-lr-cjP" secondAttribute="centerX" id="xWC-bU-94i"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="kbw-Yk-yVY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pZo-9a-59c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1026" y="-1411"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0GQ-TK-08N">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kAb-q7-pLb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RHe-hv-STp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FJT-aX-E5T" kind="relationship" relationship="rootViewController" id="3CU-MU-9Pg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EcZ-Nq-pdC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-620" y="-1411"/>
+        </scene>
+    </scenes>
+</document>
