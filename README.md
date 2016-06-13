@@ -5,6 +5,9 @@ MVVM Sample is a login use case implementation of the Model-View-ViewModel (MVVM
 
 [reactive-cocoa]: https://github.com/ReactiveCocoa/ReactiveCocoa
 
+Also if you want to compare both, I've implemented this same case using the VIPER architecture -> [VIPER-Sample][viper-sample]
+
+[viper-sample]: https://github.com/juanip027/VIPER-Sample
 
 Requirements
 ------------
