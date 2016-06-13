@@ -1,7 +1,7 @@
 MVVM Sample
 ===========
 
-MVVM Sample is a login use case implementation of the Model-View-ViewModel (MVVM) architecture using [ReactiveCocoa 4][reactive-cocoa].
+MVVM Sample is a login use case implementation of the MVVM architecture using [ReactiveCocoa 4][reactive-cocoa].
 
 [reactive-cocoa]: https://github.com/ReactiveCocoa/ReactiveCocoa
 
