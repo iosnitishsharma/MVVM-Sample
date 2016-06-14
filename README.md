@@ -32,9 +32,9 @@ Open the workspace in xCode.
 Unit Tests
 ----------
 
-One of the main advantages of the MVVM Architecture is the high testability with a minimal setup. It's based on the separation of the app logic (ViewModel layer) from presentation (View layer).
+One of the main advantages of the MVVM Architecture is the high testability with a minimal setup, because of the separation of the app logic (ViewModel layer) from presentation (View layer).
 
-Unit tests are written using the BDD frameworks [Quick][quick] and [Nimble][nimble]. 
+Unit tests were written using the BDD frameworks [Quick][quick] and [Nimble][nimble]. 
 
 To run the unit tests simply hit `Cmd + U` in Xcode. 
 
